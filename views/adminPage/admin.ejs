@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<body>
+    <table>
+        <% for (user of users){  %>
+            <tr>
+                <td><%= user.email %></td>
+                <td><%= user.username %></td>
+                <td><form method="POST" action="/admin/<%= user._id %>?_method=DELETE">
+                     <button>DELETE</button>
+                     </form>
+                </td>
+            </tr>
+        <% }  %>
+       
+    </table>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row">  
+  <div class="col-8 offset-2">
+    <h3>Create a New Listing</h3>
+    <form method="POST" action="/listings" class="needs-validation" novalidate enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input name="listing[title]" placeholder="enter title" type="text" class="form-control" required/>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+   
+      <!-- <br /><br /> -->
+     
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea 
+        name="listing[description]"
+        placeholder="enter description" class="form-control" required></textarea>
+        <div class="invalid-feedback">Enter proper description</div>
+      </div>
+      <!--paste link -->
+      <!-- <div class="mb-3">
+        <label for="image" class="form-label">Image URL Link</label>
+        <input
+        name="listing[image]"
+        placeholder="enter image URL/Link"
+        type="text" class="form-control"/>
+      </div> -->
+      
+      <!--upload image-->
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload Image</label>
+        <input
+        name="listing[image]"
+        type="file" class="form-control"/>
+      </div>
+
+      <!-- <div class="mb-3">
+        <label for="image" class="form-label">Category</label>
+        <select
+        name="listing[category]"
+        class="form-control">
+        <option value="Pools"><%= Pools</option>
+        <option value="Camping"><%= Camping</option>
+        <option value="Igloo"><%= Igloo</option>
+        <option value="Mountain"><%= Mountain</option>
+        <option value="Monument"><%= Monument</option>
+        <option value="Beach"><%= Beach</option>
+        <option value="Top cities"><%= Top cities</option>
+        <option value="Creative Places"><%= Creative Places</option>
+        </select>
+      </div> -->
+
+   <div class="row">
+      <div class="mb-3 col-md-4">
+        <label for="price" class="form-label">Price</label>
+        <input name="listing[price]" placeholder="enter price"  class="form-control" required/>
+        <div class="invalid-feedback">Enter valid price</div>
+      </div>
+    
+    
+      <div class="mb-3 col-md-8">
+        <label for="country" class="form-label">Country</label>
+        <input name="listing[country]" placeholder="enter country" type="text" class="form-control" required/>
+        <div class="invalid-feedback">Enter valid country name</div>
+      </div>
+      
+    </div>
+
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input
+        name="listing[location]"
+        placeholder="enter location"
+        type="text" class="form-control" required
+      />
+      <div class="invalid-feedback">Enter valid location</div>
+      </div>
+      
+   
+      <button class="btn add-btn">Add</button>
+    </form>
+  </div>
+  </div>
