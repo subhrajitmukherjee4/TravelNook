@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
-
+const ExpressError = require("./utils/ExpressError.js");
 
 // do not share this on production
 if(process.env.NODE_ENV != "production"){
