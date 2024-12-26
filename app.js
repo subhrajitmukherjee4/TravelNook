@@ -16,7 +16,9 @@ if(process.env.NODE_ENV != "production"){
 const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
-// const adminRouter = require("./routes/admin.js");
+app.get("/",(req, res)=>{    //root route would redirect to '/listings' route
+  res.redirect ('/listings');
+});
 const dbUrl = process.env.ATLASDB_URL;
 
 //for session and flash
