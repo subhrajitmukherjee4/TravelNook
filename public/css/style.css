@@ -98,7 +98,26 @@ body{
     margin-right: 0rem!important; */
 }
 
-
+/* for responsiveness */
+@media (max-width: 450px)
+{
+    #filters{
+      display: none;
+    }
+    .f-info{
+        /* height:10rem; */
+        display: flex;
+        flex-wrap: wrap;
+        display:block;
+        padding: 0rem 1rem 0rem 1rem;
+    }
+    .f-info-socials{
+        font-size: 1.25rem;
+    }
+}
+    .container-fluid{
+       background-color: white;
+    }
 
 .card-img-top{
     border-radius: 1.2rem!important;
