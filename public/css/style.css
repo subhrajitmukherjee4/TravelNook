@@ -99,7 +99,7 @@ body{
 }
 
 /* for responsiveness */
-@media  (min-width: 200px) and (max-width: 450px)
+@media screen and (max-width: 750px)
 {
     #filters{
       display: none;
